@@ -13,7 +13,7 @@ html,
 body {
   background-color: $html_color;
   overflow: hidden;
-  font-family: "Open Sans", sans-serif;
+  font-family: Arial, sans-serif;
 
   @include for-phone-only {
     overflow: auto;
