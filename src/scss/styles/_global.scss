@@ -1,0 +1,155 @@
+.cb1 {
+  border: 1px solid red;
+}
+.cb2 {
+  border: 1px solid green;
+}
+.cb3 {
+  border: 1px solid blue;
+}
+
+/*Elementos html*/
+html,
+body {
+  background-color: $html_color;
+  overflow: hidden;
+  font-family: "Open Sans", sans-serif;
+
+  @include for-phone-only {
+    overflow: auto;
+  }
+}
+
+main {
+  background-color: $bg-white;
+}
+
+header {
+  display: flex;
+  background-color: $bg-orange;
+
+  img {
+    max-width: 40px;
+    height: auto;
+  }
+
+  @include for-phone-only {
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+nav {
+  a {
+    color: #fff;
+    background-color: $bg-red;
+    padding: 10px 20px;
+    margin-right: -5px;
+
+    &:hover,
+    &:active {
+      background-color: $bg-soft-red;
+    }
+  }
+
+  @include for-phone-only {
+    width: 100%;
+    background-color: $bg-red;
+    margin: 0 auto;
+    padding: 10px 0;
+    flex: 1;
+  }
+}
+
+.menu-footer {
+  @include for-phone-only {
+    background-color: transparent;
+  }
+}
+
+.social {
+  a {
+    background-color: $bg-brown;
+  }
+  @include for-phone-only {
+    background-color: transparent;
+  }
+}
+
+aside {
+  background-color: $bg-green;
+  .bloque {
+    background-color: $bg-orange;
+    margin-top: 10px;
+    min-height: 200px;
+  }
+  @include for-phone-only {
+    display: none !important;
+  }
+}
+
+article {
+  border-bottom: 1px solid #000;
+  padding: 5px;
+  &:last-child {
+    border-bottom: none;
+  }
+
+  h2 {
+    padding-top: 10px;
+    font-weight: bold;
+  }
+
+  p {
+    padding: 5px 0px;
+  }
+
+  blockquote {
+    border-left: 3px solid $bg-grey;
+    padding-left: 10px;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  background-color: $bg-orange;
+  min-height: 80px;
+  @include for-phone-only {
+    position: relative;
+  }
+}
+
+/* clases general*/
+
+.text-left {
+  text-align: left;
+  @include for-phone-only {
+    text-align: center;
+  }
+}
+.text-right {
+  text-align: right;
+  @include for-phone-only {
+    text-align: center;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.centered {
+  margin: auto 0;
+}
+
+/*Clases y ID específicas*/
+
+#main-info {
+  height: 90vh;
+}
+
+.inline {
+  display: flex;
+}

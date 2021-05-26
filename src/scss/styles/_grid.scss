@@ -1,0 +1,100 @@
+@import "media-querys";
+
+/*Se crea un grid de 10 colunmas*/
+
+.col,
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9 {
+  padding: 10px 15px;
+  float: left;
+
+  &_padding-more {
+    padding: 10px 25px;
+  }
+}
+.col-1 {
+  width: 100%;
+}
+.col-2 {
+  width: 20%;
+}
+.col-3 {
+  width: 30%;
+}
+.col-4 {
+  width: 40%;
+}
+.col-5 {
+  width: 50%;
+}
+.col-6 {
+  width: 60%;
+}
+.col-7 {
+  width: 70%;
+}
+.col-8 {
+  width: 80%;
+}
+.col-9 {
+  width: 90%;
+}
+.col {
+  width: 100%;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.full {
+  width: 100%;
+  display: flex;
+}
+
+.col,
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.container {
+  @include for-phone-only {
+    width: 100%;
+    display: inline;
+    align-items: center;
+    margin: 0 auto;
+
+    &--col-2-normal {
+      width: 20%;
+    }
+
+    &--no-padding {
+      padding: 0;
+    }
+
+    &--top-padding {
+      padding: 15px 0 0 0;
+    }
+
+    &--bottom-padding {
+      padding: 0 0 15px 0;
+    }
+  }
+}
+
+.inline {
+  display: flex;
+}
